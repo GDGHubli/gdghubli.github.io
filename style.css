@@ -190,6 +190,7 @@ footer{
         /* padding: 6%; */
         width: auto;
         height: auto;
+        border: 1px solid #000000;
     }
     p{
         margin: 0;
