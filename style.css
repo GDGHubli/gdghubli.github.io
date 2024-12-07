@@ -186,9 +186,10 @@ footer{
 
     }
     .apply{
-        margin: 10%;
+        padding: 10%;
         /* padding: 6%; */
         width: auto;
+        height: auto;
     }
     p{
         margin: 0;
@@ -208,6 +209,9 @@ footer{
         margin: 0;
         margin: auto;
         padding: 0;
+    }
+    a{
+        color: white;
     }
 }
 
