@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0c6eabb1.css",
-    "main.js": "/static/js/main.3c19f1c1.js",
+    "main.js": "/static/js/main.18876b94.js",
     "static/js/453.863b37a4.chunk.js": "/static/js/453.863b37a4.chunk.js",
     "static/media/bg.png": "/static/media/bg.5258a9b7b7f0d3212fab.png",
     "static/media/culture.png": "/static/media/culture.c0c8f297b2288c824c10.png",
@@ -30,16 +30,17 @@
     "static/media/kar.png": "/static/media/kar.5a49f3281a3855d4cd30.png",
     "static/media/track3.png": "/static/media/track3.9da533f28eaa21743594.png",
     "static/media/image.png": "/static/media/image.6368ab986036370cb023.png",
+    "static/media/eth.png": "/static/media/eth.b9fb8b3f1470c734ea43.png",
     "static/media/KLETech.png": "/static/media/KLETech.37b68960a9d8f6ba0d62.png",
     "static/media/Group 107.png": "/static/media/Group 107.633b318dd77cf23963fa.png",
     "static/media/kle.png": "/static/media/kle.ea1444eef15409b08e05.png",
     "index.html": "/index.html",
     "main.0c6eabb1.css.map": "/static/css/main.0c6eabb1.css.map",
-    "main.3c19f1c1.js.map": "/static/js/main.3c19f1c1.js.map",
+    "main.18876b94.js.map": "/static/js/main.18876b94.js.map",
     "453.863b37a4.chunk.js.map": "/static/js/453.863b37a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0c6eabb1.css",
-    "static/js/main.3c19f1c1.js"
+    "static/js/main.18876b94.js"
   ]
 }
