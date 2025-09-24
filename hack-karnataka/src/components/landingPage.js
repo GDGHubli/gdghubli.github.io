@@ -17,12 +17,20 @@ import track3 from '../images/track3.png'; // Import Track 3 image
 import track4 from '../images/yaksh.png'; // Import Track 4 image
 import track6 from '../images/track6.png'; // Import Track 4 image
 import track5 from '../images/track5.png'; // Import Track 5 image
+import tbg1 from '../images/tracks/agri.jpeg'; // Import Track Background image
+import tbg2 from '../images/tracks/aiforgood.png'; // Import Track Background image
+import tbg3 from '../images/tracks/nature3.png'; // Import Track Background image
+import tbg4 from '../images/tracks/health1.png'; // Import Track Background image
+import tbg5 from '../images/tracks/culture.png'; // Import Track Background image
 import speaker1 from '../images/speaker1.jpg'; // Import Speaker image
 import speaker2 from '../images/speaker2.jpg'; // Import Speaker image
 import speaker3 from '../images/speaker3.jpg'; // Import Speaker image
 import speaker4 from '../images/speaker4.jpg'; // Import Speaker image
 import speaker5 from '../images/speaker5.jpg'; // Import Speaker image
 import speaker6 from '../images/speaker6.jpg'; // Import Speaker image
+import devfolio from '../images/devfoilio.png'; // Import Devfolio logo
+import eth from '../images/eth.png'; // Import ETHIndia logo
+import apply from '../images/applydevfolio.png'; // Import Apply logo
 import logoV from '../images/logoVertical.png'; // Import Hack Karnataka logo vertical
 import kle from '../images/KLETech.png'; // Import KLE Tech logo
 import { Speakers } from './speaker';
@@ -60,7 +68,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="hidden md:block">
-            <a href="https://hackkarnataka.tech" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
+            <a href="https://hackkarnataka.in" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
               Register Now
             </a>
          </div>
@@ -83,6 +91,7 @@ const Header = () => {
     </header>
   );
 };
+
 
 // Countdown Timer Component
 const CountdownTimer = () => {
@@ -171,9 +180,16 @@ const Hero = () => (
           </div>
           <CountdownTimer />
           <div className="space-x-4 mt-8">
-            <a href="https://hackkarnataka.tech" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
+            {/* <a href="https://hackkarnataka.in" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
               Register Now
-            </a>
+            </a> */}
+           <div
+            className="apply-button"
+            data-hackathon-slug="hack-karnataka"
+            data-button-theme="light"
+            style={{ height: "44px", width: "312px" }}
+          ></div>
+
              <a href="#about" className="bg-white/20 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 inline-block">
               Learn More
             </a>
@@ -242,7 +258,7 @@ const SponsorshipCard = ({ tier, cost, features, isFeatured }) => (
                 </li>
             ))}
         </ul>
-        <a href="mailto:sponsors@hackkarnataka.tech" className={`w-full text-center py-3 rounded-full font-semibold transition-all duration-300 ${isFeatured ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200 dark:bg-indigo-900/50 dark:text-white dark:hover:bg-indigo-900'}`}>
+        <a href="mailto:sponsors@hackkarnataka.in" className={`w-full text-center py-3 rounded-full font-semibold transition-all duration-300 ${isFeatured ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200 dark:bg-indigo-900/50 dark:text-white dark:hover:bg-indigo-900'}`}>
             Become a Sponsor
         </a>
     </div>
@@ -304,8 +320,8 @@ const WhySponsor = () => {
                 </div>
                  <div className="text-center mt-12 text-lg text-gray-600 dark:text-gray-300">
                     <p>We are open to custom packages and in-kind sponsorships. Please contact us for further details!</p>
-                    <a href="mailto:sponsors@hackkarnataka.tech" className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline mt-2 inline-block">
-                        sponsors@hackkarnataka.tech
+                    <a href="mailto:sponsors@hackkarnataka.in" className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline mt-2 inline-block">
+                        sponsors@hackkarnataka.in
                     </a>
                 </div>
             </div>
@@ -324,10 +340,10 @@ const Tracks = () => {
     // { name: 'Smart Cities & Future Living', icon: <Bus className="w-10 h-10 text-white" />, description: 'Build technologies for smarter, more efficient, and sustainable urban environments.', bgImage: heroBackground },
     // { name: 'AgriTech & Rural Innovation', icon: <Tractor className="w-10 h-10 text-white" />, description: 'Create solutions to modernize agriculture and empower rural communities.', bgImage: heroBackground },
     
-    { name: 'Nature & Sustainability', icon: track1, description: 'Develop solutions for environmental challenges, promoting a greener future.', bgImage: heroBackground },
-    { name: 'Generative AI for Good', icon: track2, description: 'Leverage generative AI to address social issues and create positive impact.', bgImage: heroBackground },
-    { name: 'HealthTech & Wellness', icon: track3, description: 'Innovate in healthcare with technology to improve patient outcomes and well-being.', bgImage: heroBackground },
-    { name: 'AgriTech & Rural Innovation', icon: track5, description: 'Create solutions to modernize agriculture and empower rural communities.', bgImage: heroBackground },
+    { name: 'Nature & Sustainability', icon: track1, description: 'Develop solutions for environmental challenges, promoting a greener future.', bgImage: tbg5 },
+    { name: 'Generative AI for Good', icon: track2, description: 'Leverage generative AI to address social issues and create positive impact.', bgImage: tbg2 },
+    { name: 'HealthTech & Wellness', icon: track3, description: 'Innovate in healthcare with technology to improve patient outcomes and well-being.', bgImage: tbg4 },
+    { name: 'AgriTech & Rural Innovation', icon: track5, description: 'Create solutions to modernize agriculture and empower rural communities.', bgImage: tbg1 },
     { name: 'Culture & Tourism Tech', icon: track4, description: 'Enhance cultural heritage and tourism experiences through digital solutions.', bgImage: heroBackground },
     { name: 'Smart Cities & Future Living', icon: track6, description: 'Build technologies for smarter, more efficient, and sustainable urban environments.', bgImage: heroBackground },
     // { name: 'Open Innovation', icon: <Sparkles className="w-8 h-8 text-pink-500" />, description: 'Bring your most creative and groundbreaking ideas to life, with no thematic constraints.' },
@@ -350,7 +366,7 @@ const Tracks = () => {
               ></div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 group-hover:bg-black/70 transition-colors duration-300"></div>
+              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors duration-300"></div>
 
               {/* Content */}
               <div className="relative h-full flex flex-col items-center justify-center p-6 text-center text-white transition-all duration-300">
@@ -466,11 +482,11 @@ const Prizes = () => (
 
 
 // Partner Card Component
-const PartnerCard = ({ name, logoUrl, websiteUrl }) => (
+const PartnerCard = ({ name, logoUrl, websiteUrl, alt }) => (
     <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="block bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-64">
         <img 
             src={logoUrl} 
-            alt={`${name} logo`} 
+            alt={alt || `${name} Logo`}
             className="h-20 mx-auto object-contain grayscale-[10%] hover:grayscale-0 transition-all duration-300"
             onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/200x100/ffffff/333333?text=Logo+Not+Found'; }}
         />
@@ -483,15 +499,21 @@ const PartnerCard = ({ name, logoUrl, websiteUrl }) => (
 const Partners = () => {
     const esteemedPartners = [
         // { name: "Google Cloud", logoUrl: gcloud, websiteUrl: "#" },
-        { name: "KLE Technological University", logoUrl: kle, websiteUrl: "#" },
+        { name: "KLE Technological University", logoUrl: kle, websiteUrl: "https://www.kletech.ac.in/", alt: "KLE Technological University" },
         // { name: "Karnataka Tourism Dept", logoUrl: kar , websiteUrl: "#" },
         // { name: "To be announced", logoUrl: "" , websiteUrl: "#" },
     ];
+    const Sponsors = [
+      // { name: "Google Cloud", logoUrl: gcloud, websiteUrl: "#" },
+      { name: "Devfoilo", logoUrl: devfolio , websiteUrl: "https://devfolio.co", alt: "DEVFOLIO LOGO" },
+      { name: "ETHIndia", logoUrl: eth , websiteUrl: "https://ethindia.co ", alt: "ETHINDIA LOGO" },
+      // { name: "To be announced", logoUrl: "" , websiteUrl: "#" },
+  ];
     
     const communityPartners = [
         { name: "Google Developer Group Hubli", logoUrl: gdgLogodark, websiteUrl: "#" },
         // { name: "To be announced", logoUrl: "" , websiteUrl: "#" },
-        { name: "Women Techmakers", logoUrl: wtm, websiteUrl: "#" },
+        { name: "Women Techmakers", logoUrl: wtm, websiteUrl: "" },
     ];
 
     return (
@@ -505,14 +527,20 @@ const Partners = () => {
                 <div>
                     <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Esteemed Partners</h3>
                     <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
-                        {esteemedPartners.map(partner => <PartnerCard key={partner.name} {...partner} />)}
+                        {esteemedPartners.map(partner => <PartnerCard key={partner.name} {...partner}   />)}
+                    </div>
+                </div>
+                <div className="mt-20">
+                    <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Sponsors</h3>
+                    <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+                        {Sponsors.map(partner => <PartnerCard key={partner.name} {...partner}  />)}
                     </div>
                 </div>
 
                 <div className="mt-20">
                     <h3 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Community Partners</h3>
                     <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
-                        {communityPartners.map(partner => <PartnerCard key={partner.name} {...partner} />)}
+                        {communityPartners.map(partner => <PartnerCard key={partner.name} {...partner}  />)}
                     </div>
                 </div>
             </div>
@@ -583,14 +611,14 @@ const Footer = () => (
         <div>
           <h3 className="text-xl font-bold mb-4">Contact Us</h3>
           <p className="text-gray-400">For general inquiries:</p>
-          <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">contact@hackkarnataka.tech</a>
+          <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">support@hackkarnataka.in</a>
            <p className="text-gray-400 mt-4">For sponsorship:</p>
-          <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">sponsors@hackkarnataka.tech</a>
+          <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">support@hackkarnataka.in</a>
         </div>
       </div>
       <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
         <p>&copy; {new Date().getFullYear()} Hack Karnataka. All rights reserved.</p>
-        <p className="text-sm mt-2">Website: <a href="https://" className="text-indigo-400 hover:text-indigo-300">hackkarnataka.tech</a></p>
+        <p className="text-sm mt-2">Website: <a href="https://" className="text-indigo-400 hover:text-indigo-300">hackkarnataka.in</a></p>
       </div>
     </div>
   </footer>
@@ -609,6 +637,16 @@ export default function LandingPage() {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   return (
     <div className={`${isDarkMode ? 'dark' : ''} bg-white dark:bg-gray-900 overflow-hidden`}>
