@@ -4,6 +4,7 @@ import { Calendar, MapPin, Award, Users, Mic, BarChart, Lightbulb, Leaf, BrainCi
 import heroBackground from '../images/bg.png'; // Import your local image
 import gdgLogo from '../images/gdgDark.png'; // Import powered by logo
 import gdgLogodark from '../images/GDGLight.png'; // Import powered by logo
+import gdg from '../images/gdg.png'; // Import Google Developer Group logo
 import gcloud from '../images/pngegg.png'; // Import Google Cloud logo
 import kletech from '../images/kle.png'; // Import KLE Tech logo
 import logo from '../images/logo.png'; // Import Hack Karnataka logo
@@ -29,10 +30,13 @@ import speaker4 from '../images/speaker4.jpg'; // Import Speaker image
 import speaker5 from '../images/speaker5.jpg'; // Import Speaker image
 import speaker6 from '../images/speaker6.jpg'; // Import Speaker image
 import devfolio from '../images/devfoilio.png'; // Import Devfolio logo
+import sdm from '../images/sdm.jpeg'; // Import SDM logo
+import iiit from '../images/iiit.jpg'; // Import IIIT logo
 import eth from '../images/eth.png'; // Import ETHIndia logo
 import apply from '../images/applydevfolio.png'; // Import Apply logo
 import logoV from '../images/logoVertical.png'; // Import Hack Karnataka logo vertical
 import kle from '../images/KLETech.png'; // Import KLE Tech logo
+import insta from '../images/insta.png'; // Import Instagram logo
 import { Speakers } from './speaker';
 // Helper component for Icons
 const IconWrapper = ({ children }) => (
@@ -57,21 +61,28 @@ const Header = () => {
   return (
     <header className="bg-black/20 dark:bg-gray-900/40 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
       
           <img src={logoV} alt="Hack Karnataka Logo" className="h-10 sm:h-12 p-1 mx-auto drop-shadow-[0_0_1px_rgba(100,100,100,0.8)]" />
        
+        </div> */}
+        <div className="hidden md:block ">
+          <img src={gdgLogo} alt="Google Developer Group Hubli Logo" className="h-4 sm:h-10" />
         </div>
         <nav className="hidden md:flex space-x-8">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="text-white dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">{link.name}</a>
+            <a key={link.name} href={link.href} className="text-white/40 dark:text-gray-300 hover:text-white dark:hover:text-white transition-colors duration-300">{link.name}</a>
           ))}
         </nav>
         <div className="hidden md:block">
-            <a href="https://hackkarnataka.in" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
-              Register Now
-            </a>
+            <div
+              className="apply-button"
+              data-hackathon-slug="hack-karnataka"
+              data-button-theme="light"
+              style={{ height: '44px', width: '312px' }}
+            ></div>
          </div>
+        
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-gray-800 dark:text-white">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,8 +95,13 @@ const Header = () => {
             {navLinks.map(link => (
               <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">{link.name}</a>
             ))}
-            <a href="#Register Now" onClick={() => setIsOpen(false)} className="bg-indigo-600 text-white px-6 py-4 rounded-full hover:bg-indigo-700 transition-all duration-300">Register Now</a>
-          </nav>
+            <div
+              className="apply-button m-2"
+              data-hackathon-slug="hack-karnataka"
+              data-button-theme="light"
+              style={{ height: '44px', width: '312px' }}
+            ></div>
+            </nav>
         </div>
       )}
     </header>
@@ -171,7 +187,7 @@ const Hero = () => (
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-8 text-base sm:text-lg">
             <div className="flex items-center space-x-2">
               <Calendar className="text-indigo-400" />
-              <span>November 8th - 9th, 2025</span>
+              <span>November <b>8th - 9th, 2025</b></span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="text-indigo-400" />
@@ -179,26 +195,33 @@ const Hero = () => (
             </div>
           </div>
           <CountdownTimer />
-          <div className="space-x-4 mt-8">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             {/* <a href="https://hackkarnataka.in" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
               Register Now
             </a> */}
-           <div
-            className="apply-button"
-            data-hackathon-slug="hack-karnataka"
-            data-button-theme="light"
-            style={{ height: "44px", width: "312px" }}
-          ></div>
-
-             <a href="#about" className="bg-white/20 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-white/30 transition-all duration-300 transform hover:scale-105 inline-block">
-              Learn More
+            <div
+              className="apply-button"
+              data-hackathon-slug="hack-karnataka"
+              data-button-theme="light"
+              style={{ height: '44px', width: '312px' }}
+            ></div>
+            <a href="https://gdg.community.dev/e/mntbfb/" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-5 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 inline-block">
+              Register on GDG platform
             </a>
           </div>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <p className='text-xs'><sup className='font-bold'>*</sup> Registration on both platform is mandatory for participation</p>
+          </div>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="#about" className="inline-block transform rounded-full bg-white/20 px-4 py-1 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-white/30 lg:px-6 lg:py-2 lg:text-lg">
+              Learn More
+            </a>
+            </div>
           <div className="mt-10 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
             <p className="text-sm text-gray-400 mb-4">Powered By</p>
             <div className="flex justify-center items-center space-x-4">
+              <img src={gdg} alt="Google Developer Group Hubli Logo" className="h-6 sm:h-10" />
               <img src={kletech} alt="KLE Technological University Logo" className="h-6 sm:h-12" />
-              <img src={gdgLogo} alt="Google Developer Group Hubli Logo" className="h-9 sm:h-16" />
             </div>
           </div>
         </div>
@@ -215,22 +238,22 @@ const About = () => (
       style={{ backgroundImage: `url(${heroBackground})` }}
     ></div>
     <div className="container relative z-10 mx-auto px-6">
-      <div className="text-center mb-12">
+      <div className="text-center mb-8 ">
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tighter text-gray-600 dark:text-gray-200">
             About -  Hack Karnataka
           </h1>
         {/* <h2 className="text-4xl font-bold text-gray-800 dark:text-white">What is Hack Karnataka?</h2> */}
-        <p className="text-indigo-500 dark:text-indigo-400 mt-2 text-lg">Igniting Innovation, Problem-Solving, and Entrepreneurial Thinking</p>
+        <p className="text-indigo-500 dark:text-indigo-400 mt-4 text-lg">Igniting Innovation, Problem-Solving, and Entrepreneurial Thinking</p>
       </div>
-      <div className="max-w-6xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 lg:text-justify text-center">
+      <div className="max-w-6xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4 lg:text-justify text-center">
         {/* Desktop Content */}
-        <div className="hidden md:block space-y-6">
+        <div className="hidden md:block space-y-4">
           <p>
-          Hack Karnataka is a first-of-its-kind 30-hour in-person hackathon hosted at KLE Technological University, Hubballi. The event will bring together students from 350+ colleges, startups, industry leaders, and government agencies to collaborate on next-generation solutions.
-          With a strong emphasis on Generative AI and Agentic AI, participants will explore future-ready innovations across domains such as smart living, AgriTech, and open innovation. The hackathon will feature keynote session and various workshops led by experts from Google, Amazon AWS, Microsoft, Kaggle Grandmasters, and ACM ICPC winners, providing participants with world-class mentorship and exposure.
+          <b>Hack Karnataka</b> is a first-of-its-kind <b>30-hour in-person</b> hackathon organised by <b>Google Developer Group, Hubli</b> in association with <b>KLE Technological University, Hubballi</b>. The event will bring together students from 350+ colleges, startups, industry leaders, and government agencies to collaborate on next-generation solutions.
+          With a strong emphasis on <b>Generative AI and Agentic AI</b>, participants will explore future-ready innovations across domains such as smart living, AgriTech, and open innovation. The hackathon will feature keynote session and various workshops led by experts from Google, Amazon AWS, Microsoft, Kaggle Grandmasters, and ACM ICPC winners, providing participants with world-class mentorship and exposure.
           </p>
           <p>
-          Offering ₹10 lakh+ worth of prizes, networking opportunities, internships, and startup incubation pathways, HackKarnataka is not just a competition but a movement to inspire innovation, entrepreneurship, and problem-solving at scale. Backed by 50+ industry partners and supported by academia and government, HackKarnataka positions Hubballi and KLE Technological University as a hub for AI-driven innovation and future-ready talent.
+          Offering <b>₹10 lakh+</b> worth of prizes, networking opportunities, internships, and startup incubation pathways, HackKarnataka is not just a competition but a movement to inspire innovation, entrepreneurship, and problem-solving at scale. Backed by <b>50+ industry partners and supported by academia and government</b>, HackKarnataka positions Hubballi and KLE Technological University as a hub for AI-driven innovation and future-ready talent.
           By partnering with government agencies, industry leaders, startups, and educational institutions, we aim to create a vibrant ecosystem. We bring all stakeholders together to brainstorm ideas, tackle real-world problems, and empower young hackers to push the boundaries of what's possible with the latest technologies.
           </p>
         </div>
@@ -511,9 +534,10 @@ const Partners = () => {
   ];
     
     const communityPartners = [
-        { name: "Google Developer Group Hubli", logoUrl: gdgLogodark, websiteUrl: "#" },
+        { name: "Google Developer Group on Campus SDMCET", logoUrl: sdm, websiteUrl: "#" },
         // { name: "To be announced", logoUrl: "" , websiteUrl: "#" },
         { name: "Women Techmakers", logoUrl: wtm, websiteUrl: "" },
+        { name: "Google Developer Group on Campus IIITD", logoUrl: iiit, websiteUrl: "#" }
     ];
 
     return (
@@ -590,8 +614,8 @@ const FAQ = () => {
 // Footer
 const Footer = () => (
   <footer className="bg-gray-900 text-white">
-    <div className="container mx-auto px-6 py-12 text-center md:text-left">
-      <div className="grid md:grid-cols-3 gap-8">
+    <div className="container mx-auto pl-6 py-12 text-center md:text-left">
+      <div className="grid md:grid-cols-4 gap-12">
         <div>
           <h3 className="text-xl font-bold mb-4">Hack Karnataka</h3>
           <p className="text-gray-400">Heritage | Nature | Futuree</p>
@@ -609,16 +633,26 @@ const Footer = () => (
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+        <h3 className="text-xl font-bold mb-4">Contact Us</h3>
           <p className="text-gray-400">For general inquiries:</p>
           <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">support@hackkarnataka.in</a>
            <p className="text-gray-400 mt-4">For sponsorship:</p>
           <a href="mailto:gdghubli@gmail.com" className="text-indigo-400 hover:text-indigo-300">support@hackkarnataka.in</a>
         </div>
+        <div className='gap-12'>
+          <h3 className="text-xl font-bold mb-4"> About us </h3>
+          <a href="https://gdg.community.dev/gdg-hubli/" target="_blank" rel="noopener noreferrer" >
+            <img src={gdgLogo} alt="Google Developer Group Hubli Logo"  className="h-6 pb-2 sm:h-12" />
+          </a>
+          <div className='p-3'></div>
+          <a href="https://www.instagram.com/gdghubli/" target="_blank" rel="noopener noreferrer" >
+            <img src={insta} alt="instagram GDG Hubli"  className="h-6  sm:h-12" />
+          </a>
+        </div>
       </div>
       <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
         <p>&copy; {new Date().getFullYear()} Hack Karnataka. All rights reserved.</p>
-        <p className="text-sm mt-2">Website: <a href="https://" className="text-indigo-400 hover:text-indigo-300">hackkarnataka.in</a></p>
+        <p className="text-sm mt-2"><a href="https://" className="text-indigo-400 hover:text-indigo-300">hackkarnataka.in</a></p>
       </div>
     </div>
   </footer>

@@ -139,8 +139,8 @@ export function Speakers() {
                 Learn from industry experts and thought leaders.
               </p>
             </div>
-            <a href="https://hackkarnataka.tech" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shrink-0">
-              Register for Devfest
+            <a href="https://hackkarnataka.in" target="_blank" style={{"pointer-events": "none", "color": "#a0a0a0", "cursor": "default"}} rel="noopener noreferrer" className="bg-indigo-600 text-white px-8 py-3 rounded-full text-base font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shrink-0">
+              Register for Devfest ( Registrations will open soon )
             </a>
           </div>
         </div>
