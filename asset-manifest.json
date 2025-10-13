@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3c0cc2b5.css",
-    "main.js": "/static/js/main.f9618b81.js",
+    "main.js": "/static/js/main.344a7e38.js",
     "static/js/453.863b37a4.chunk.js": "/static/js/453.863b37a4.chunk.js",
     "static/media/bg.png": "/static/media/bg.5258a9b7b7f0d3212fab.png",
     "static/media/culture.png": "/static/media/culture.c0c8f297b2288c824c10.png",
@@ -16,6 +16,7 @@
     "static/media/health1.png": "/static/media/health1.d1c7c2aee794898ec003.png",
     "static/media/nature3.png": "/static/media/nature3.2a61bf152b27eb7c8be3.png",
     "static/media/yaksh.png": "/static/media/yaksh.90154ed8a06d6f2b3301.png",
+    "static/media/iiit.png": "/static/media/iiit.afd723a6ca70f7b255cf.png",
     "static/media/logo.png": "/static/media/logo.38d8ebc806c4cbfa79fd.png",
     "static/media/hack.png": "/static/media/hack.b767d9d618f3ce660003.png",
     "static/media/logoVertical.png": "/static/media/logoVertical.59c539cf47ca1c8f187c.png",
@@ -39,11 +40,11 @@
     "static/media/kle.png": "/static/media/kle.ea1444eef15409b08e05.png",
     "index.html": "/index.html",
     "main.3c0cc2b5.css.map": "/static/css/main.3c0cc2b5.css.map",
-    "main.f9618b81.js.map": "/static/js/main.f9618b81.js.map",
+    "main.344a7e38.js.map": "/static/js/main.344a7e38.js.map",
     "453.863b37a4.chunk.js.map": "/static/js/453.863b37a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c0cc2b5.css",
-    "static/js/main.f9618b81.js"
+    "static/js/main.344a7e38.js"
   ]
 }
